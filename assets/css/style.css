@@ -14,3 +14,11 @@ body {
 .task-card:hover {
   cursor: grab;
 }
+
+.overdue {
+  background-color: red;
+}
+
+.overdue .card-header {
+  background-color: pink;
+}
