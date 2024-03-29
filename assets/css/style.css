@@ -9,16 +9,30 @@ body {
 
 .task-card {
   margin: 0 auto;
+  z-index: 5;
 }
 
 .task-card:hover {
   cursor: grab;
 }
 
+.card-body {
+  width: inherit;
+  height: inherit;
+}
+
 .overdue {
-  background-color: red;
+  background-color: rgba(255, 92, 92, 0.75);
 }
 
 .overdue .card-header {
-  background-color: pink;
+  background-color: rgba(255, 157, 173, 0.87);
+}
+
+#done-cards .task-card {
+  background-color: green;
+}
+
+#done-cards .card-header {
+  background-color: green;
 }
