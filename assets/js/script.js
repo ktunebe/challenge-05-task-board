@@ -115,15 +115,16 @@ function handleAddTask(event){
 function handleDeleteTask(event){
     event.stopPropagation();
 
-    const taskCard = $(this).closest('.task-card');
-    taskCard.remove();
-
-    const taskId = taskCard.data('id');
-    taskList = taskList.filter(function(task) {
-        return task.taskId !== taskId;
-    })
-    
-    localStorage.setItem("tasks", JSON.stringify(taskList))
+    const yesDelete = confirm('Are you sure you want to delete this task?')
+    if (yesDelete) {
+        const taskCard = $(this).closest('.task-card');
+        taskCard.remove();
+        const taskId = taskCard.data('id');
+        taskList = taskList.filter(function(task) {
+            return task.taskId !== taskId;
+        })
+        localStorage.setItem("tasks", JSON.stringify(taskList))
+    }
 }
 
 

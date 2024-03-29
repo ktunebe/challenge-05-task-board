@@ -8,7 +8,7 @@ body {
 }
 
 .task-card {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   z-index: 5;
 }
 
@@ -17,22 +17,33 @@ body {
 }
 
 .card-body {
-  width: inherit;
-  height: inherit;
+  min-height: 15vh;
 }
 
 .overdue {
+  background-color: rgba(255, 157, 173, 0.87);
+}
+.overdue .card-header {
   background-color: rgba(255, 92, 92, 0.75);
 }
 
-.overdue .card-header {
-  background-color: rgba(255, 157, 173, 0.87);
+.dueSoon {
+  background-color: rgba(255, 255, 15, 0.575);
+}
+.dueSoon .card-header {
+  background-color: rgb(255, 255, 33);
+}
+
+.dueLater {
+  background-color: rgba(0, 225, 255, 0.5);
+}
+.dueLater .card-header {
+  background-color: rgba(0, 225, 255, 0.836);
 }
 
 #done-cards .task-card {
-  background-color: green;
+  background-color: rgba(0, 190, 0, 0.514);
 }
-
 #done-cards .card-header {
-  background-color: green;
+  background-color: rgba(0, 158, 0, 0.836);;
 }
